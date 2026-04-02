@@ -74,5 +74,5 @@ body {
 }
 
 .rotate {
-  animation: box-rotate 0.5s linear 0s infinite;
+  animation: box-rotate 1s linear 0s infinite;
 }
