@@ -1,0 +1,81 @@
+body {
+  background-color: #bebebe;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+article > div {
+  /* tutti i quadrati di esempio */
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  /* centro la scritta nel contenuto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article > div > p {
+  /* tolgo i margini al p */
+  margin: 0;
+}
+
+.long {
+  background-color: rgb(186, 0, 0);
+  color: white;
+  /* sul selettore NON hover dell'elemento potete applicare
+  una TRANSITION per applicare gradualmente il cambio di width */
+  /* transition: nome-proprietà durata curva-accelerazione ritardo */
+  transition: width 3000ms linear 0s;
+}
+
+.long:hover {
+  /* cattura l'evento del cursore del mouse */
+  width: 400px;
+}
+
+.color {
+  background-color: green;
+  transition: background-color 5s linear 0s;
+}
+
+.color:hover {
+  background-color: red;
+}
+
+.move {
+  background-color: purple;
+  color: white;
+  transition: transform 2s linear 1s;
+}
+
+.move:hover {
+  transform: translateX(300px);
+}
+
+.crazy {
+  background-color: crimson;
+  transition: all 4s linear 1s;
+}
+
+.crazy:hover {
+  background-color: darkturquoise;
+  transform: translateX(300px) rotate(5turn);
+  font-size: 2em;
+}
+
+/* e se io volessi una transizione "IN ENTRATA" e una differente
+"IN USCITA"? */
+
+/* per farlo, dovete applicare DUE volte la proprietà TRANSITION */
+.move-double {
+  background-color: forestgreen;
+  /* ...e questa è diventata quella in USCITA */
+  transition: transform 1.5s linear 0s;
+}
+
+.move-double:hover {
+  transform: translateX(300px);
+  /* ne metto una anche nella classe :hover */
+  /* OCCHIO!!! questa diventa quella IN ENTRATA */
+  transition: transform 4s linear 0.5s;
+}
