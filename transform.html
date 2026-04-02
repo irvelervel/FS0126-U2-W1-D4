@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1 - Trasformazioni in CSS</title>
+    <link rel="stylesheet" href="./css/transform.css" />
+  </head>
+  <body>
+    <header>
+      <h2>La proprietà TRANSFORM in CSS</h2>
+    </header>
+    <main>
+      <p>
+        La proprietà "transform" in CSS ci permette di apportare delle
+        "trasformazioni visive" ai nostri elementi HTML. Ancora una volta, come
+        con "position", siamo davanti ad una proprietà che va utilizzata con
+        parsimonia, e che NON costituisce un valido metodo per impaginare e/o
+        creare un layout: la proprietà "transform" come vedremo ALTERA lo
+        "stacking context", e rischiamo che gli elementi vadano sopra/sotto
+        altri, scompaiano, non mantengano la posizione in tutte le risoluzioni.
+        Per creare impaginazioni dobbiamo sempre ricorrere alla proprietà
+        "display"
+      </p>
+      <section>
+        <article>
+          <h3>Transform: TRANSLATE</h3>
+          <div class="translate">
+            <p>TRANSLATE</p>
+          </div>
+        </article>
+        <article>
+          <h3>Transform: ROTATE</h3>
+          <div class="rotate">
+            <p>ROTATE</p>
+          </div>
+        </article>
+        <article>
+          <h3>Transform: SCALE</h3>
+          <div class="scale">
+            <p>SCALE</p>
+          </div>
+        </article>
+        <article>
+          <h3>Transform: SKEW</h3>
+          <div class="skew">
+            <p>SKEW</p>
+          </div>
+        </article>
+        <article>
+          <h3>Transform: MULTI</h3>
+          <div class="multi">
+            <p>TUTTO INSIEME</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
