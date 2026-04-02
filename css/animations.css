@@ -1,0 +1,78 @@
+@keyframes box-moving {
+  0% {
+    transform: translateX(0px);
+  }
+
+  /* parte piano... */
+  /* dire 50% dell'animazione significa: trascorsa la METÀ del tempo impostato per l'animazione */
+  50% {
+    transform: translateX(100px);
+  }
+
+  /* ...nella seconda metà accelera! */
+  100% {
+    transform: translateX(500px);
+  }
+}
+
+@keyframes scompare {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(calc(100vw + 100%)); /* ?? */
+  }
+}
+
+@keyframes box-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+body {
+  background-color: #bebebe;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.move {
+  background-color: indianred;
+  /* animation: nome-animazione durata curva-accelerazione ritardo numero-ripetizioni stili-conclusivi */
+  animation: box-moving 4s linear 1s 1 forwards;
+}
+
+.disappear {
+  background-color: goldenrod;
+  /* animation: nome-animazione durata curva-accelerazione ritardo numero-ripetizioni stili-conclusivi */
+  animation: scompare 4s linear 1s 1 forwards;
+}
+
+.navy {
+  background-color: navy;
+  color: white;
+}
+
+.rotate {
+  animation: box-rotate 0.5s linear 0s infinite;
+}
